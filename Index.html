@@ -2,19 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <p>Multiply every element in the array with 13:</p>
-<p id="addition"></p>
-<script>
-var numbers = [2091, 3587, 452, 395];
-function myFunction (num) {
-return num + 13;
-var newarray = numbers.map(myFunction);
-document .getElementById("addition") .innerHTML = newarray;
-}
-</script>
+    <p id="multiplication"></p>  
+    <script>
+        var numbers = [2091, 3587, 452, 395];
+        function myFunction(num) {
+            return num * 13;  
+        }
+        var newarray = numbers.map(myFunction);  
+        document.getElementById("multiplication").innerHTML = newarray; 
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Multiply every element in the array with 13:</p>
+    <p id="multiplication"></p>  
+    <script>
+        var numbers = [2091, 3587, 452, 395];
+        function myFunction(num) {
+            return num * 13;  
+        }
+        var newarray = numbers.map(myFunction);  
+        document.getElementById("multiplication").innerHTML = newarray; 
+    </script>
 </body>
 </html>
