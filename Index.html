@@ -3,18 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array Map and Sort</title>
 </head>
 <body>
-    <p>Multiply every element in the array with 13:</p>
-    <p id="multiplication"></p>  
+
+    <p>Original Array:</p>
+    <p id="original"></p>
+
+    <p>Mapped Array (multiplied by 13):</p>
+    <p id="mapped"></p>
+
+    <p>Ascending Order:</p>
+    <p id="ascending"></p>
+
+    <p>Descending Order:</p>
+    <p id="descending"></p>
+
     <script>
+        
         var numbers = [2091, 3587, 452, 395];
-        function myFunction(num) {
-            return num * 13;  
-        }
-        var newarray = numbers.map(myFunction);  
-        document.getElementById("multiplication").innerHTML = newarray; 
+
+        
+        document.getElementById("original").innerHTML = numbers;
+
+        
+        var mappedArray = numbers.map(function(num) {
+            return num * 13;
+        });
+
+        document.getElementById("mapped").innerHTML = mappedArray;
+
+        
+        var ascendingOrder = [...mappedArray].sort(function(a, b) {
+            return a - b;
+        });
+
+        document.getElementById("ascending").innerHTML = ascendingOrder;
+
+        
+        var descendingOrder = [...mappedArray].sort(function(a, b) {
+            return b - a;
+        });
+
+        document.getElementById("descending").innerHTML = descendingOrder;
     </script>
+
 </body>
 </html>
